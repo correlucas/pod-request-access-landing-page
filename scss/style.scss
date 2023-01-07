@@ -73,7 +73,7 @@ header {
 main {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding-block: 130px;
+  padding-block: 100px;
 
   section {
     @include container;
@@ -94,6 +94,15 @@ main {
     max-width: 445px;
     padding-bottom: 40px;
   }
+  &::after {
+    position: absolute;
+    content: url(/assets/desktop/bg-pattern-dots.svg);
+    bottom: 50px;
+    right: 0px;
+    @include display(desktop-big) {
+      right: 430px;
+    }
+  }
 }
 
 .hero-content {
@@ -103,37 +112,41 @@ main {
   background-color: $black;
 }
 
-// .hero-image {
-//   background-image: url(/assets/desktop/image-host.jpg);
-//   background-repeat: no-repeat;
-//   background-size: 888px;
-//   background-position: 50% 50%;
-// }
-
 form {
   padding-bottom: 64px;
 
   label {
     @include flex(center, space-between);
     background-color: $dark-gray;
-    padding: 4px;
+    padding-left: 32px;
     max-width: 445px;
     border-radius: 50px;
   }
 
-  #btn {
-    @include body(700, 18px);
+  .btn {
+    @include body(700, 16px);
     background-color: $green;
     color: $black;
-    padding: 16px;
+    padding: 16px 24px;
+    margin: 6px;
     border-radius: 50px;
+    box-shadow: 0px 25px 20px -20px rgba(2, 34, 22, 0.498);
+    &:hover {
+      background: #b3ffe2;
+      transition: all 0.3s ease;
+    }
   }
 }
 
 input::placeholder {
   @include body(400, 18px);
   color: white;
-  padding: 12px;
+  text-align: left;
+}
+
+#submitMail {
+  padding-left: 10px;
+  color: $white;
 }
 
 .social {

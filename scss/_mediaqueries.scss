@@ -1,6 +1,6 @@
 @mixin display($device) {
   @if $device == desktop-big {
-    @media (max-width: 1920px) {
+    @media (min-width: 1441px) {
       @content;
     }
   }
