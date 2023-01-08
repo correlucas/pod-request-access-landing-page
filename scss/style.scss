@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@100;200;300;700&display=swap");
 
 @import "reset";
-@import "mediaqueries";
+@import "mediaQueries";
 
 // reset input styles
 input {
@@ -75,6 +75,9 @@ main {
   grid-template-columns: 2fr 1fr;
   padding-block: 100px;
 
+  position: relative;
+  overflow: visible;
+
   section {
     @include container;
   }
@@ -95,13 +98,13 @@ main {
     padding-bottom: 40px;
   }
   &::after {
+    display: block;
     position: absolute;
     content: url(/assets/desktop/bg-pattern-dots.svg);
+    width: 232px;
+    height: 104px;
     bottom: 50px;
-    right: 0px;
-    @include display(desktop-big) {
-      right: 430px;
-    }
+    right: -96px;
   }
 }
 
