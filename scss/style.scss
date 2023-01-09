@@ -64,6 +64,13 @@ body {
   @include display(desktop) {
     background-position: 100% 50%;
   }
+  @include display(tablet) {
+    background-position: top right;
+    background-size: contain;
+    background-size: 500px 767px;
+    object-fit: cover;
+    background-image: url(/assets/tablet/image-host.jpg);
+  }
 }
 
 header {
@@ -75,8 +82,9 @@ main {
   grid-template-columns: 2fr 1fr;
   padding-block: 100px;
 
-  position: relative;
-  overflow: visible;
+  @include display(tablet) {
+    display: flex;
+  }
 
   section {
     @include container;
@@ -99,12 +107,25 @@ main {
   }
   &::after {
     display: block;
+    object-fit: cover;
     position: absolute;
+    overflow: hidden;
     content: url(/assets/desktop/bg-pattern-dots.svg);
     width: 232px;
-    height: 104px;
-    bottom: 50px;
-    right: -96px;
+    height: 251px;
+    transform: translate(893px, 630px);
+
+    @include display(desktop) {
+      transform: translate(1057px, 630px);
+    }
+
+    @include display(desktop-big) {
+      ransform: translate(1005px, 630px);
+    }
+
+    @include display(tablet) {
+      display: none;
+    }
   }
 }
 
@@ -113,6 +134,9 @@ main {
   padding-top: 88px;
   padding-right: 52px;
   background-color: $black;
+
+  @include display(tablet) {
+  }
 }
 
 form {
