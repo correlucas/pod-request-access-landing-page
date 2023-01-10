@@ -81,6 +81,7 @@ main {
   display: grid;
   grid-template-columns: 2fr 1fr;
   padding-block: 100px;
+  position: relative;
 
   @include display(tablet) {
     display: flex;
@@ -113,7 +114,7 @@ main {
     content: url(/assets/desktop/bg-pattern-dots.svg);
     width: 232px;
     height: 251px;
-    bottom: 0;
+    bottom: -95px;
     right: 0;
   }
 }
