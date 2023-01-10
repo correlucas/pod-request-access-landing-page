@@ -113,19 +113,8 @@ main {
     content: url(/assets/desktop/bg-pattern-dots.svg);
     width: 232px;
     height: 251px;
-    transform: translate(893px, 630px);
-
-    @include display(desktop) {
-      transform: translate(1057px, 630px);
-    }
-
-    @include display(desktop-big) {
-      ransform: translate(1005px, 630px);
-    }
-
-    @include display(tablet) {
-      display: none;
-    }
+    bottom: 0;
+    right: 0;
   }
 }
 

@@ -152,25 +152,8 @@ main::after {
   content: url(/assets/desktop/bg-pattern-dots.svg);
   width: 232px;
   height: 251px;
-  transform: translate(893px, 630px);
-}
-
-@media (max-width: 1440px) {
-  main::after {
-    transform: translate(1057px, 630px);
-  }
-}
-
-@media (max-width: 1920px) {
-  main::after {
-    ransform: translate(1005px, 630px);
-  }
-}
-
-@media (max-width: 961px) {
-  main::after {
-    display: none;
-  }
+  bottom: 0;
+  right: 0;
 }
 
 .hero-content {
