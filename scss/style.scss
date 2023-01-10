@@ -106,26 +106,6 @@ main {
     max-width: 445px;
     padding-bottom: 40px;
   }
-  &::after {
-    display: flex;
-    position: absolute;
-    content: url(/assets/desktop/bg-pattern-dots.svg);
-    width: 232px;
-    height: 251px;
-    bottom: -95px;
-    right: 0px;
-
-    @include display(desktop-min-max) {
-      bottom: -95px;
-      right: -146px;
-    }
-
-    @include display(tablet) {
-      bottom: -212px;
-      right: 0px;
-      left: 21px;
-    }
-  }
 }
 
 .hero-content {
