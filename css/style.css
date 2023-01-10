@@ -155,13 +155,6 @@ main::after {
   right: 0px;
 }
 
-@media (max-width: 1440px) {
-  main::after {
-    bottom: -95px;
-    right: -146px;
-  }
-}
-
 @media (max-width: 961px) {
   main::after {
     bottom: -212px;
