@@ -10,6 +10,12 @@
     }
   }
 
+  @if $device == desktop-1440 {
+    @media (min-width: 1439px) and (max-width: 1441px) {
+      @content;
+    }
+  }
+
   @if $device == tablet {
     @media (max-width: 961px) {
       @content;

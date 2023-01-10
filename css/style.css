@@ -103,7 +103,7 @@ main {
   position: relative;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding-block: 100px;
+  margin-block: 100px;
 }
 
 @media (max-width: 961px) {
@@ -149,17 +149,21 @@ main::after {
   display: flex;
   position: absolute;
   content: url(/assets/desktop/bg-pattern-dots.svg);
-  width: 232px;
-  height: 251px;
-  bottom: -95px;
+  bottom: -50px;
   right: 0px;
+}
+
+@media (min-width: 1439px) and (max-width: 1441px) {
+  main::after {
+    right: -140px;
+  }
 }
 
 @media (max-width: 961px) {
   main::after {
     bottom: -212px;
     right: 0px;
-    left: 21px;
+    left: 0px;
   }
 }
 

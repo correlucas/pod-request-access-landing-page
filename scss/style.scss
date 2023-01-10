@@ -81,7 +81,7 @@ main {
   position: relative;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding-block: 100px;
+  margin-block: 100px;
 
   @include display(tablet) {
     display: flex;
@@ -110,20 +110,17 @@ main {
     display: flex;
     position: absolute;
     content: url(/assets/desktop/bg-pattern-dots.svg);
-    width: 232px;
-    height: 251px;
-    bottom: -95px;
+    bottom: -50px;
     right: 0px;
 
-    @include display(desktop-min-max) {
-      bottom: -95px;
-      right: -146px;
+    @include display(desktop-1440) {
+      right: -140px;
     }
 
     @include display(tablet) {
       bottom: -212px;
       right: 0px;
-      left: 21px;
+      left: 0px;
     }
   }
 }
