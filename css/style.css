@@ -100,10 +100,10 @@ header {
 }
 
 main {
+  position: relative;
   display: grid;
   grid-template-columns: 2fr 1fr;
   padding-block: 100px;
-  position: relative;
 }
 
 @media (max-width: 961px) {
@@ -146,15 +146,28 @@ main p {
 }
 
 main::after {
-  display: block;
-  object-fit: cover;
+  display: flex;
   position: absolute;
-  overflow: hidden;
   content: url(/assets/desktop/bg-pattern-dots.svg);
   width: 232px;
   height: 251px;
   bottom: -95px;
-  right: 0;
+  right: 0px;
+}
+
+@media (max-width: 1440px) {
+  main::after {
+    bottom: -95px;
+    right: -146px;
+  }
+}
+
+@media (max-width: 961px) {
+  main::after {
+    bottom: -212px;
+    right: 0px;
+    left: 21px;
+  }
 }
 
 .hero-content {
