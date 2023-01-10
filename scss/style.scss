@@ -115,7 +115,7 @@ main {
     bottom: -95px;
     right: 0px;
 
-    @include display(desktop) {
+    @include display(desktop-min-max) {
       bottom: -95px;
       right: -146px;
     }
