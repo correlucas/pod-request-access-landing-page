@@ -23,7 +23,7 @@
   }
 
   @if $device == mobile {
-    @media (max-width: 540px) {
+    @media (max-width: 600px) {
       @content;
     }
   }

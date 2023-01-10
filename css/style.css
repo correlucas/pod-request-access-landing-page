@@ -95,8 +95,23 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  body {
+    background-image: url(/assets/mobile/image-host.png);
+    background-size: cover;
+  }
+}
+
 header {
-  margin-bottom: 103px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 600px) {
+  header {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 main {
@@ -112,37 +127,16 @@ main {
   }
 }
 
+@media (max-width: 600px) {
+  main {
+    margin-block: 20px;
+  }
+}
+
 main section {
   max-width: 1110px;
   margin: 0 auto;
   padding-inline: 20px;
-}
-
-main h1 {
-  font-weight: 100;
-  font-size: 52px;
-  line-height: 62px;
-  color: #56e6af;
-  text-transform: uppercase;
-  max-width: 665px;
-  padding-bottom: 24px;
-}
-
-main h1 span {
-  font-weight: 100;
-  font-size: 52px;
-  line-height: 62px;
-  color: white;
-  text-transform: uppercase;
-}
-
-main p {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  color: #5b678b;
-  max-width: 445px;
-  padding-bottom: 40px;
 }
 
 main::after {
@@ -167,11 +161,66 @@ main::after {
   }
 }
 
+@media (max-width: 600px) {
+  main::after {
+    display: none;
+  }
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 52px;
+  line-height: 62px;
+  color: #56e6af;
+  text-transform: uppercase;
+  max-width: 665px;
+  padding-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+span {
+  color: white;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #5b678b;
+  max-width: 445px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #5b678b;
+  }
+}
+
 .hero-content {
   max-width: 723px;
   padding-top: 88px;
   padding-right: 52px;
   background-color: #121726;
+}
+
+@media (max-width: 600px) {
+  .hero-content {
+    max-width: 100%;
+    padding-top: unset;
+    padding-right: unset;
+    background-color: unset;
+    text-align: center;
+  }
 }
 
 form {
@@ -186,6 +235,17 @@ form label {
   padding-left: 32px;
   max-width: 445px;
   border-radius: 50px;
+}
+
+@media (max-width: 600px) {
+  form label {
+    flex-direction: column;
+    background-color: rgba(255, 0, 0, 0);
+    padding-left: unset;
+    max-width: 100%;
+    align-items: stretch;
+    gap: 10px;
+  }
 }
 
 form .btn {
@@ -220,9 +280,32 @@ input::placeholder {
   color: white;
 }
 
+@media (max-width: 600px) {
+  #submitMail {
+    padding: 16px 24px;
+    border-radius: 50px;
+    background-color: #2b334a;
+  }
+}
+
 .social {
   display: flex;
   align-items: center;
   justify-content: normal;
   gap: 40px;
+}
+
+@media (max-width: 600px) {
+  .social {
+    justify-content: center;
+    transform: scale(0.8);
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 961px) {
+  .decoration {
+    display: none;
+  }
 }

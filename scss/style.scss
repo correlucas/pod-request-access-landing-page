@@ -71,10 +71,21 @@ body {
     object-fit: cover;
     background-image: url(/assets/tablet/image-host.jpg);
   }
+
+  @include display(mobile) {
+    background-image: url(/assets/mobile/image-host.png);
+    background-size: cover;
+  }
 }
 
 header {
-  margin-bottom: 103px;
+  margin-bottom: 100px;
+
+  @include display(mobile) {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 main {
@@ -87,25 +98,14 @@ main {
     display: flex;
   }
 
+  @include display(mobile) {
+    margin-block: 20px;
+  }
+
   section {
     @include container;
   }
 
-  h1 {
-    @include headline($green);
-    max-width: 665px;
-    padding-bottom: 24px;
-
-    span {
-      @include headline($white);
-    }
-  }
-
-  p {
-    @include body(400, 18px);
-    max-width: 445px;
-    padding-bottom: 40px;
-  }
   &::after {
     display: flex;
     position: absolute;
@@ -122,6 +122,35 @@ main {
       right: 0px;
       left: 0px;
     }
+
+    @include display(mobile) {
+      display: none;
+    }
+  }
+}
+
+h1 {
+  @include headline($green);
+  max-width: 665px;
+  padding-bottom: 24px;
+
+  @include display(mobile) {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+span {
+  color: white;
+}
+
+p {
+  @include body(400, 18px);
+  max-width: 445px;
+  padding-bottom: 40px;
+
+  @include display(mobile) {
+    @include body(400, 16px);
   }
 }
 
@@ -131,7 +160,12 @@ main {
   padding-right: 52px;
   background-color: $black;
 
-  @include display(tablet) {
+  @include display(mobile) {
+    max-width: 100%;
+    padding-top: unset;
+    padding-right: unset;
+    background-color: unset;
+    text-align: center;
   }
 }
 
@@ -144,6 +178,15 @@ form {
     padding-left: 32px;
     max-width: 445px;
     border-radius: 50px;
+
+    @include display(mobile) {
+      flex-direction: column;
+      background-color: rgba(255, 0, 0, 0);
+      padding-left: unset;
+      max-width: 100%;
+      align-items: stretch;
+      gap: 10px;
+    }
   }
 
   .btn {
@@ -170,9 +213,28 @@ input::placeholder {
 #submitMail {
   padding-left: 10px;
   color: $white;
+
+  @include display(mobile) {
+    padding: 16px 24px;
+    border-radius: 50px;
+    background-color: $dark-gray;
+  }
 }
 
 .social {
   @include flex(center, normal);
   gap: 40px;
+
+  @include display(mobile) {
+    justify-content: center;
+    transform: scale(0.8);
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+.decoration {
+  @include display(tablet) {
+    display: none;
+  }
 }
